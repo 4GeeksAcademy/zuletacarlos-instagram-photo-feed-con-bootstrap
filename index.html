@@ -13,40 +13,42 @@
 
 <body>
     <header class="ig-header sticky-top bg-light border-bottom">
-  <div class="container d-flex align-items-center justify-content-between py-2">
-    <a class="navbar-brand d-flex align-items-center m-0" href="#">
-      <i class="bi bi-instagram fs-4"></i>
-      <span class="ms-2 fw-semibold">Instagram</span>
-    </a>
-    <div class="d-flex align-items-center gap-2">
-      <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#newPostModal">
-        Create a new post
-      </button>
-      <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-          <i class="bi bi-gear"></i>
-        </button>
-        <ul class="dropdown-menu dropdown-menu-end">
-          <li><a class="dropdown-item" href="#">Profile</a></li>
-          <li><a class="dropdown-item" href="#">Accesibility</a></li>
-          <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
-          <li><hr class="dropdown-divider"></li>
-         <li><a class="dropdown-item text-danger" href="#logout">Logout</a></li>
+        <div class="container d-flex align-items-center justify-content-between py-2">
+            <a class="navbar-brand d-flex align-items-center m-0" href="#">
+                <i class="bi bi-instagram fs-4"></i>
+                <span class="ms-2 fw-semibold">Instagram</span>
+            </a>
+            <div class="d-flex align-items-center gap-2">
+                <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#newPostModal">
+                    Create a new post
+                </button>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="bi bi-gear"></i>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a class="dropdown-item" href="#">Profile</a></li>
+                        <li><a class="dropdown-item" href="#">Accesibility</a></li>
+                        <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item text-danger" href="#logout">Logout</a></li>
 
-        </ul>
-      </div>
-    </div>
-  </div>
-</header>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
 
     <section class="view-toggle text-center my-3">
-  <button id="feedViewBtn" class="btn btn-outline-secondary btn-icon active" type="button" title="Feed">
-    <i class="bi bi-list"></i>
-  </button>
-  <button id="gridViewBtn" class="btn btn-outline-secondary btn-icon" type="button" title="Grid">
-    <i class="bi bi-grid-3x3-gap"></i>
-  </button>
-</section>
+        <button id="feedViewBtn" class="btn btn-outline-secondary btn-icon active" type="button" title="Feed">
+            <i class="bi bi-list"></i>
+        </button>
+        <button id="gridViewBtn" class="btn btn-outline-secondary btn-icon" type="button" title="Grid">
+            <i class="bi bi-grid-3x3-gap"></i>
+        </button>
+    </section>
 
     <main class="container my-4">
         <div class="row justify-content-center">
@@ -234,24 +236,24 @@
         </div>
     </div>
     <script>
-  const feed = document.getElementById("feed");
-  const feedViewBtn = document.getElementById("feedViewBtn");
-  const gridViewBtn = document.getElementById("gridViewBtn");
+        const feed = document.getElementById("feed");
+        const feedViewBtn = document.getElementById("feedViewBtn");
+        const gridViewBtn = document.getElementById("gridViewBtn");
 
-  function setFeed() {
-    feed.classList.remove("grid-view");
-    feedViewBtn.classList.add("active");
-    gridViewBtn.classList.remove("active");
-  }
-  function setGrid() {
-    feed.classList.add("grid-view");
-    gridViewBtn.classList.add("active");
-    feedViewBtn.classList.remove("active");
-  }
+        function setFeed() {
+            feed.classList.remove("grid-view");
+            feedViewBtn.classList.add("active");
+            gridViewBtn.classList.remove("active");
+        }
+        function setGrid() {
+            feed.classList.add("grid-view");
+            gridViewBtn.classList.add("active");
+            feedViewBtn.classList.remove("active");
+        }
 
-  feedViewBtn.addEventListener("click", setFeed);
-  gridViewBtn.addEventListener("click", setGrid);
-</script>
+        feedViewBtn.addEventListener("click", setFeed);
+        gridViewBtn.addEventListener("click", setGrid);
+    </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
